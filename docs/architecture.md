@@ -22,6 +22,119 @@ This separation allows individual components to be evaluated, replaced, or scale
 ---
 
 ## 2. High-Level Architecture
+flowchart TB
+
+    %% =========================
+    %% CLIENT LAYER
+    %% =========================
+    U["👤 User<br/>Natural-language fashion query"]
+
+    FE["React + TypeScript<br/>Fashion Search UI"]
+    NG["Nginx<br/>Reverse Proxy"]
+
+    U --> FE
+    FE --> NG
+
+    %% =========================
+    %% API LAYER
+    %% =========================
+    API["FastAPI<br/>Search API / v1"]
+
+    NG --> API
+
+    %% =========================
+    %% QUERY UNDERSTANDING
+    %% =========================
+    GEM["Gemini API<br/>Query Understanding"]
+
+    PQ["Structured ParsedQuery<br/>category • attributes<br/>season • language • intent"]
+
+    API --> GEM
+    GEM --> PQ
+
+    %% =========================
+    %% RETRIEVAL LAYER
+    %% =========================
+    EMB["BGE-M3<br/>Query Embedding"]
+
+    DENSE["Qdrant<br/>Dense Vector Retrieval"]
+
+    BM25["BM25<br/>Sparse Keyword Retrieval"]
+
+    PQ --> EMB
+    EMB --> DENSE
+
+    PQ --> BM25
+
+    %% =========================
+    %% HYBRID RETRIEVAL
+    %% =========================
+    RRF["Reciprocal Rank Fusion<br/>(RRF)"]
+
+    DENSE --> RRF
+    BM25 --> RRF
+
+    %% =========================
+    %% RANKING
+    %% =========================
+    RANK["Lightweight Ranking Layer<br/>Business + relevance signals"]
+
+    RRF --> RANK
+
+    %% =========================
+    %% DATA / METADATA
+    %% =========================
+    PG["PostgreSQL<br/>Product Catalogue + Metadata"]
+
+    RANK --> PG
+
+    %% =========================
+    %% CACHE
+    %% =========================
+    REDIS["Redis<br/>Query / Result Cache"]
+
+    API <--> REDIS
+
+    %% =========================
+    %% RESPONSE / EXPLANATION
+    %% =========================
+    EX["Grounded Explanation<br/>Why these products match"]
+
+    RANK --> EX
+    PG --> EX
+
+    RESP["Search Response<br/>Products + scores + parsed intent<br/>+ explanation"]
+
+    EX --> RESP
+    API --> RESP
+    RESP --> FE
+
+    %% =========================
+    %% INFRASTRUCTURE
+    %% =========================
+    subgraph DOCKER["Docker Compose Infrastructure"]
+        API
+        PG
+        DENSE
+        REDIS
+    end
+
+    %% =========================
+    %% STYLING
+    %% =========================
+    classDef client fill:#e8f0fe,stroke:#4285f4,stroke-width:2px
+    classDef api fill:#e6f4ea,stroke:#34a853,stroke-width:2px
+    classDef ai fill:#fef7e0,stroke:#fbbc04,stroke-width:2px
+    classDef retrieval fill:#fce8e6,stroke:#ea4335,stroke-width:2px
+    classDef data fill:#f3e8fd,stroke:#9334e6,stroke-width:2px
+    classDef output fill:#e0f2f1,stroke:#00897b,stroke-width:2px
+
+    class U,FE,NG client
+    class API,RANK api
+    class GEM,PQ,EMB,EX ai
+    class DENSE,BM25,RRF retrieval
+    class PG,REDIS data
+    class RESP output
 
 ```text
                          ┌──────────────────────┐
