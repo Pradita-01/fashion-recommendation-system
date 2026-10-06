@@ -90,7 +90,8 @@ The system uses **BGE-M3** embeddings to support semantic retrieval across multi
 **the production retrieval path combines**
 
 ````markdown
-``` Dense Retrieval
+
+Dense Retrieval
        +
 Sparse BM25 Retrieval
        ↓
@@ -99,7 +100,7 @@ Reciprocal Rank Fusion
 Lightweight Ranking
        ↓
 Final Product Results
-```
+
 ````
 
 **Dense retrieval** : captures the semantic similarity
@@ -111,7 +112,7 @@ The LLM does not directly choose the final products
 The pathway for the decision:
 
 ````markdown
-```
+
 User Query
     ↓
 Gemini
@@ -125,7 +126,7 @@ Fusion
 Ranking
     ↓
 Products
-```
+
 ````
 
 This separation keeps retrieval quality measurable and allows the retrieval pipeline to be evaluated independently from the language-model interpretation layer.
