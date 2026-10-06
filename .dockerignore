@@ -1,0 +1,44 @@
+# Python
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+
+# Virtual environments
+.venv/
+**/.venv/
+
+# Node
+node_modules/
+frontend/dist/
+
+# Large datasets
+data/
+*.jsonl.gz
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Python build artifacts
+*.egg-info/
+dist/
+build/
+
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# Model/cache artifacts
+.cache/
+**/.cache/

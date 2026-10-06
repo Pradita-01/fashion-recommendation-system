@@ -1,0 +1,176 @@
+{
+  "dataset": "D:\\fashion-search\\backend\\evals\\dataset\\golden_review.jsonl",
+  "source_report": "D:\\fashion-search\\backend\\evals\\reports\\retrieval_ablation_report.json",
+  "languages": {
+    "English": {
+      "query_count": 17,
+      "queries": [
+        {
+          "query_id": "q01",
+          "query": "comfortable beach outfit for summer",
+          "ndcg_at_10": 0.9807123809353316,
+          "recall_at_10": 0.9,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q02",
+          "query": "lightweight summer dress",
+          "ndcg_at_10": 0.9559928509833562,
+          "recall_at_10": 0.9,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q03",
+          "query": "soft comfortable cotton clothes",
+          "ndcg_at_10": 0.929379282305566,
+          "recall_at_10": 0.9,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q04",
+          "query": "women's casual summer dress",
+          "ndcg_at_10": 0.9895948844467957,
+          "recall_at_10": 0.9,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q05",
+          "query": "cotton beach cover up",
+          "ndcg_at_10": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q06",
+          "query": "comfortable summer clothes",
+          "ndcg_at_10": 0.9959871931890529,
+          "recall_at_10": 0.8,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q07",
+          "query": "lightweight clothes for hot weather",
+          "ndcg_at_10": 0.7792540809308696,
+          "recall_at_10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q08",
+          "query": "casual outfit for vacation",
+          "ndcg_at_10": 0.8464958550230284,
+          "recall_at_10": 0.9,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q09",
+          "query": "breathable summer clothing",
+          "ndcg_at_10": 0.926990462918554,
+          "recall_at_10": 0.8888888888888888,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q10",
+          "query": "comfortable beach clothing",
+          "ndcg_at_10": 0.9786681188449072,
+          "recall_at_10": 0.8,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q11",
+          "query": "women's lightweight cotton dress",
+          "ndcg_at_10": 0.8961362053660933,
+          "recall_at_10": 0.8,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q12",
+          "query": "soft cotton casual outfit",
+          "ndcg_at_10": 0.9061825259033358,
+          "recall_at_10": 0.8,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q13",
+          "query": "summer dress for a beach vacation",
+          "ndcg_at_10": 0.9893268557329113,
+          "recall_at_10": 0.9,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q14",
+          "query": "comfortable clothes for walking",
+          "ndcg_at_10": 0.994765544362312,
+          "recall_at_10": 0.7777777777777778,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q15",
+          "query": "lightweight outfit for hot weather",
+          "ndcg_at_10": 0.8820369504633795,
+          "recall_at_10": 0.8888888888888888,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q19",
+          "query": "summer clothes",
+          "ndcg_at_10": 1.0,
+          "recall_at_10": 0.9,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q20",
+          "query": "comfortable clothes",
+          "ndcg_at_10": 0.9848330959553523,
+          "recall_at_10": 0.7,
+          "mrr": 1.0
+        }
+      ],
+      "mean": {
+        "ndcg_at_10": 0.9433150757271086,
+        "recall_at_10": 0.8679738562091504,
+        "mrr": 1.0
+      }
+    },
+    "Tamil": {
+      "query_count": 2,
+      "queries": [
+        {
+          "query_id": "q16",
+          "query": "வெயில்கால கடற்கரை பயணத்திற்கு வசதியான உடைகள்",
+          "ndcg_at_10": 0.9827606849569068,
+          "recall_at_10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q17",
+          "query": "கோடைக்காலத்திற்கு இலகுவான வசதியான உடைகள்",
+          "ndcg_at_10": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0
+        }
+      ],
+      "mean": {
+        "ndcg_at_10": 0.4913803424784534,
+        "recall_at_10": 0.5,
+        "mrr": 0.5
+      }
+    },
+    "Hindi": {
+      "query_count": 1,
+      "queries": [
+        {
+          "query_id": "q18",
+          "query": "गर्मियों में समुद्र तट की यात्रा के लिए आरामदायक कपड़े",
+          "ndcg_at_10": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0
+        }
+      ],
+      "mean": {
+        "ndcg_at_10": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0
+      }
+    }
+  }
+}
