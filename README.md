@@ -782,7 +782,7 @@ Grounded Explanation
 
 ## UI - Demo:
 <p align="center">
-  <img src="docs/screenshots/ui-demo.png"
+  <img src="docs/ui-demo.png"
        alt="Fashion Recommendation Search UI"
        width="100%">
 </p>
