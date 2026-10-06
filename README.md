@@ -162,6 +162,11 @@ The local architecture contains
 
 ## Architecture:
 A high level architecture diagram:
+<h2 align="center">System Architecture</h2>
+
+<p align="center">
+  <img src="docs/architecture.png" alt="Fashion Recommendation and Semantic Search System Architecture" width="100%">
+</p>
 
 ````markdown
 ```
