@@ -82,6 +82,8 @@ Parsed intent:
 - Season: Summer
 - Attributes: Lightweight, Comfortable
 - Language: English
+
 '''
+## Multi lingual approach:
 
 
